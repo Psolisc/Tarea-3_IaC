@@ -11,21 +11,27 @@ pipeline {
   
     stages{
         stage('Inicializar Terraform') {
-            steps {
+            step {
                 sh 'terraform init'
             }
         } 
 
         stage('Visualizar Terraform Providers') {
-            steps {
+            step {
                 sh 'terraform providers'
             }
         } 
         
         stage('Terraform Plan') {
-            steps {
+            step {
                 sh 'terraform plan'
             }
         } 
+
+        stage('Terraform Apply') {
+            step {
+                sh 'terraform apply'
+            }
+        } 
     }
-}  
+} 
