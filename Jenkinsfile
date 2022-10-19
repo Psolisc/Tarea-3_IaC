@@ -16,6 +16,12 @@ pipeline {
       }
     } 
 
+    stage('Visualizar Terraform Providers'){
+      step {
+        sh 'terraform providers'
+      }
+    } 
+    
      stage('Terraform Plan'){
        step {
          sh 'terraform plan'
