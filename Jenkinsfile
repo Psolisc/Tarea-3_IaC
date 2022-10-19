@@ -12,25 +12,25 @@ pipeline {
     stages{
         stage('Inicializar Terraform') {
             steps {
-                sh 'terraform init'
+                powershell 'terraform init'
             }
         } 
 
         stage('Visualizar Terraform Providers') {
             steps {
-                sh 'terraform providers'
+                powershell 'terraform providers'
             }
         } 
         
         stage('Terraform Plan') {
             steps {
-                sh 'terraform plan'
+                powershell 'terraform plan'
             }
         } 
 
         stage('Terraform Apply') {
             steps {
-                sh 'terraform apply'
+                powershell 'terraform apply'
             }
         } 
     }
